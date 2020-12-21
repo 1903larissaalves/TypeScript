@@ -1,16 +1,16 @@
 class NegociacaoController{
 
-    private _data: HTMLInputElement;
-    private _quantidade: HTMLInputElement;
-    private _valor: HTMLInputElement;
+    private _data: JQuery;
+    private _quantidade: JQuery;
+    private _valor: JQuery;
     private _negociacoes = new Negociacoes();
     private _negociacoesView = new NegociacoesView("#negociacoesView");
     private _mensagemView = new MensagemView("#mensagemView");
 
     constructor(){
-        this._data = <HTMLInputElement>document.querySelector("#data");
-        this._quantidade = <HTMLInputElement>document.querySelector("#quantidade");
-        this._valor = <HTMLInputElement>document.querySelector("#valor");
+        this._data = $("#data");
+        this._quantidade = $("#quantidade");
+        this._valor = $("#valor");
         this._negociacoesView.update(this._negociacoes);
     }
 
@@ -19,9 +19,9 @@ class NegociacaoController{
         event.preventDefault();
 
         const negociacao = new Negociacao(
-            new Date(this._data.value.replace(/-/g, ',')),
-            parseInt(this._quantidade.value),
-            parseFloat(this._valor.value)
+            new Date(this._data.val().replace(/-/g, ',')),
+            parseInt(this._quantidade.val()),
+            parseFloat(this._valor.val())
         );
 
 
