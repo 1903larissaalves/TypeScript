@@ -1,6 +1,5 @@
 class Negociacoes {
     constructor() {
-        //private _negociacoes :Array<Negociacao> = [];
         this._negociacoes = [];
     }
     adiciona(negociacao) {
