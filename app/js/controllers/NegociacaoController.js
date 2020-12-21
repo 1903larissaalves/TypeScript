@@ -2,6 +2,7 @@ class NegociacaoController {
     constructor() {
         this._negociacoes = new Negociacoes();
         this._negociacoesView = new NegociacoesView("#negociacoesView");
+        this._mensagemView = new MensagemView("#mensagemView");
         this._data = document.querySelector("#data");
         this._quantidade = document.querySelector("#quantidade");
         this._valor = document.querySelector("#valor");
@@ -17,6 +18,7 @@ class NegociacaoController {
         });
         this._negociacoes.adiciona(negociacao);
         this._negociacoesView.update(this._negociacoes);
+        this._mensagemView.update("Negociação adicionada com sucesso!");
         console.log(negociacao);
     }
 }
