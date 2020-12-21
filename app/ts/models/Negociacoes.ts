@@ -1,4 +1,4 @@
-class Negociacoes{
+class Negociacoes extends View{
 
     //private _negociacoes :Array<Negociacao> = [];
     private _negociacoes :Negociacao[] = [];
